@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rig_type: MyString
+  oil_well: MyString
+  drilling_crew: MyString
+  max_pressure_ptong: 1.5
+
+two:
+  rig_type: MyString
+  oil_well: MyString
+  drilling_crew: MyString
+  max_pressure_ptong: 1.5

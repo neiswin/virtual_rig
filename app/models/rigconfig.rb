@@ -1,0 +1,2 @@
+class Rigconfig < ApplicationRecord
+end
