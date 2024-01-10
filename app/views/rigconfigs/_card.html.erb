@@ -1,0 +1,20 @@
+<div class="card mx-3 my-3">
+  <div class="card-header">
+    <h5 class="fw-bolder mb-1"><%= rig.rig_type %> №<%= rig.rig_number %></h5>
+    <div class="text-muted fst-italic mb-1">
+      Буровая бригада №<%= rig.drilling_crew %>
+    </div>
+  </div>  
+  <div class="card-body">
+    <h4 class="card-title">Скважина: <%= rig.oil_well %></h4>
+    <p class="card-text">Датчик давления на трубном ключе: <em><strong>1234 м.</strong></em></p>
+    <p class="card-text">Итоговая Глубина: 1234 м.</p>
+  </div>
+  <div class="card-footer text-white bg-success">Статус: Доступен</div>
+  <div class="card-footer text-muted">Последнее обновление: <%= rig.formatted_updated_at %></div>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <%= link_to 'Изменить',edit_rigconfig_path(rig.id) ,class: 'btn btn-primary' %>
+
+  </div>
+  
+</div>

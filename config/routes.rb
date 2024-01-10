@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root "rigconfigs#index"
 
-  resources :rigconfigs, only: %i[index new create]
+  resources :rigconfigs, only: %i[index edit update]
 end

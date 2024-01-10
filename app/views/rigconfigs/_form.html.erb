@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-3 col-sm-2">
+    </div>
+
+    <div class="col-12 col-sm-8">
+      <%= render 'shared/errors', object: @rig %>   
+     
+      <%= form_with model: @rig do |f|%>
+
+      <div class="mb-2">
+        <div class="form-floating ">
+          <%= f.text_field :oil_well, class:'form-control'  %>
+          <%= f.label :oil_well, 'Наименование скважины' %>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <div class="form-floating ">
+          <%= f.number_field :drilling_crew, in: 1..15, step: 1, class:'form-control'  %>
+          <%= f.label :drilling_crew, 'Номер бригады' %>
+        </div>
+      </div>
+      
+
+      <div class="mb-2">
+        <div class="form-floating ">
+          <%= f.select :rig_type, ["Drillmec наземного исполнения", "Drillmec эшелонного исполнения", "АРС-250"], { label: "Выберите тип буровой установки",
+           wrapper: { class: 'has-warning', data: { foo: 'bar' } } }, { class: "form-select" } %>
+          <%= f.label :rig_type, 'Тип буровой' %>
+        </div>     
+      </div>
+
+      <div class="mb-2">
+        <div class="form-floating ">
+          <%= f.number_field :rig_number, in: 1..15, step: 1, class:'form-control'  %>
+          <%= f.label :rig_number, 'Номер станка' %>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="mb-2">
+        <%= f.submit "Сохранить", class: "btn btn-success w-150 mt-3", data: { turbo:false } %>
+      </div>
+
+      <% end %>
+
+    </div>
+
+  <div class="col-3 col-sm-2">
+  </div>
+</div>
