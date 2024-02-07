@@ -1,0 +1,2 @@
+class RigValue < ApplicationRecord
+end
